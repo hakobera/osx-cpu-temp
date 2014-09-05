@@ -1,6 +1,6 @@
 # OSX CPU Temp
 
-Outputs current CPU temperature in °C for OSX
+Outputs current CPU temperature in °C for OSX and publis it to MQTT broker.
 
 ## Usage 
 
@@ -12,25 +12,19 @@ make
 ### Running
 
 ```bash
-./osx-cpu-temp
-```
-
-or
-
-```bash
-sudo make install # installs to /usr/local/bin
-osx-cpu-temp
+SANGO_USERNAME="xxx" SANGO_PASSWORD="yyy" go run main.go
 ```
 
 ### Output example
 
 ```
-61.8°C
+publish:
+TOPIC: hakobera@github/testgo
+MSG: 54.0°C
+subscribe:
+TOPIC: hakobera@github/testgo
+MSG: 54.0°C
 ```
-
-## Maintainer 
-
-Sébastien Lavoie <sebastien@lavoie.sl>
 
 ### Source 
 
